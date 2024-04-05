@@ -14,4 +14,6 @@ public interface UserFacade {
     User updateUser(User user);
 
     void deleteUser(Long id);
+
+    void saveEndereco(EnderecoDTO enderecoDTO);
 }

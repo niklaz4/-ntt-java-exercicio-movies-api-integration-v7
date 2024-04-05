@@ -15,6 +15,9 @@ public class User {
     private String username;
     private String email;
     private String password;
+
+    @OneToOne(mappedBy = "usuario")
+    private EnderecoDTO endereco;
    @OneToMany
     private List<Role> roles;
    @OneToMany
@@ -75,4 +78,6 @@ public class User {
     public void setFavoriteMovies(List<Filme> favoriteMovies) {
         this.favoriteMovies = favoriteMovies;
     }
+
+
 }

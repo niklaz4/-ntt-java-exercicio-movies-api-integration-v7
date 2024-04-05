@@ -39,4 +39,9 @@ public class UserController {
     public void deleteUser(@PathVariable Long id){
         userFacade.deleteUser(id);
     }
+
+    @PostMapping("/endereco")
+    public void salvarEndereco(@RequestBody EnderecoDTO enderecoDTO){
+        userFacade.saveEndereco(enderecoDTO);
+    }
 }
